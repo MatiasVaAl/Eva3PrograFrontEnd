@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script src="../3js/resultado.js"></script>
+    <!-- Incorporamos bootstrap mediante CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<body onload="obtenerIdActualizar();">
+    <div class="container">
+        <h1>Actualizar resultado.</h1>
+        <hr>
+        <div class="card">
+            <div class="card-header">Actualizar resultado seleccionado</div>
+            <div class="card-body">      
+        <form>
+            <div class="mb-3">
+                <label for="txt_nombre" class="form-label">Ingresar resultado</label>
+                <input type="text" class="form-control" id="txt_nombre" aria-describedby="resultado_Help">
+                <div id="resultado_Help" class="form-text">Ingrese el nuevo resultado.</div>
+            </div>
+
+            <div>
+                <input class="btn btn-primary" type="button" value="Actualizar" onclick="actualizarResultado();">
+                <input class="btn btn-secondary" type="button" value="Cancelar" onclick="javascript:history.back();"> 
+            </div>
+        </form>
+
+        <div id="correcto" class="alert alert-success" role="alert" style="display: none; width: 360px;">
+            El resultado a sido actualizado correctamente.
+          </div>
+        
+          <div id="error" class="alert alert-danger" role="alert" style="display: none; width: 310px;">
+            No se a podido actualizar el resultado.
+          </div>
+
+          <div id="sinValor" class="alert alert-warning" role="alert" style="display: none; width: 300px;">
+            No se pueden ingresar valores vacios.
+          </div>
+
+            </div>
+        </div>
+    </div><!-- Fin de class container-->
+</body>
+</html>
